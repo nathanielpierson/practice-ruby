@@ -1,4 +1,4 @@
-class Fruits
+class Fruit
   def initialize (traits)
     @color = traits[:color]
     @price = traits[:price]
@@ -16,9 +16,9 @@ class Fruits
   end
 end
 
-banana = Fruits.new({color: "yellow", price: 1.99, location: "Venezuela", best_fruit: false})
-dragonfruit = Fruits.new({color: "magenta", price: 3.69, location: "Dragon Roost Island", best_fruit: false})
-raspberry = Fruits.new({color: "pink", price: 0.41, location: "America", best_fruit: true})
+banana = Fruit.new({color: "yellow", price: 1.99, location: "Venezuela", best_fruit: false})
+dragonfruit = Fruit.new({color: "magenta", price: 3.69, location: "Dragon Roost Island", best_fruit: false})
+raspberry = Fruit.new({color: "pink", price: 0.41, location: "America", best_fruit: true})
 pp "Bananas are #{banana.color}, dragonfruit cost #{dragonfruit.price}, and raspberries are from #{raspberry.location}."
 raspberry.location = "Greenland"
 pp "Bananas are #{banana.color}, dragonfruit cost #{dragonfruit.price}, and raspberries are from #{raspberry.location}."
