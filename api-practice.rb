@@ -7,11 +7,15 @@ while deck_count > 10 || deck_count < 1
 end
 response1 = HTTP.get"https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=#{deck_count}"
 deck1 = response1.parse
-deck_id = deck1["deck_id"]
-pile = "pile"
-response1 = HTTP.get"https://deckofcardsapi.com/api/deck/#{deck_id}/pile/#{pile}/list/"
-pp response1
-# deck2 = response1.parse
-pp deck_id
 pp deck1
+deck_id = deck1["deck_id"]
+response2 = HTTP.get"https://deckofcardsapi.com/api/deck/#{deck_id}/shuffle/"
+deck1shuffled = response2.parse
+pp deck1
+pp deck1shuffled
+# response1 = HTTP.get"https://deckofcardsapi.com/api/deck/#{deck_id}/pile/pileone/list/"
+# deck2 = response1.parse
+# pp pileone
+# # pp deck_id
+# pp deck1
 # pp deck2
